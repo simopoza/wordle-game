@@ -85,7 +85,7 @@ const useGameStore = create<GameState>((set, get) => ({
         word: getRandomWord(words),
         guesses: Array(5).fill(''),
         currentGuesses: 0,
-        remainAttempts: state.wonLoseFlag === 'Won' ? 5 : state.remainAttempts,//if won reset it with 5 if lost give it the write number
+				remainAttempts: state.wonLoseFlag === 'Won' ? 5 : (state.remainAttempts <= 0 ? 5 : state.remainAttempts),
 				wonLoseFlag: '',
       })),
 		getAllGuesses: () => {
