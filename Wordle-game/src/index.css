@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .main-card {
+    @apply flex h-screen w-screen bg-gray-600 flex-col justify-center items-center;
+  }
+
+  .header {
+    @apply text-6xl py-3 font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-400
+  }
+
+  .word-guess-input {
+    @apply w-16 h-16 border border-gray-400 font-bold uppercase text-white flex justify-center items-center
+  }
+
+  .letter-class {
+    @apply h-10 rounded-md m-px flex justify-center items-center uppercase
+  }
+} 
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    background-color: #ccc;
+  }
+  50% {
+    transform: rotateX(90deg);
+    background-color: #ccc;
+  }
+  100% {
+    transform: rotateX(180deg);
+    background-color: inherit;
+  }
+}
+
+.flip-animation {
+  animation: flip 0.9s ease-in-out;
+  transform-origin: center;
+  display: inline-block;
+  backface-visibility: hidden;
+}
+
+.word-guess-input {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.9s ease;
+  perspective: 1000px;
+}
