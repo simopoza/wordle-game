@@ -46,8 +46,8 @@ const KeyBoardButtons = () => {
 
             const label = letter.replace(/[()]/g, ''); // Remove parentheses for display
             const additionalClasses = letter === "(Enter)" || letter === "(delete)" 
-              ? "w-16" // Adjust width for special buttons
-              : "w-10";
+              ? "sm:w-14 w-14" // Wide buttons on desktop, narrower on mobile
+              : "sm:w-10 w-6"; // Default width for other buttons
 
             return (
               <button 

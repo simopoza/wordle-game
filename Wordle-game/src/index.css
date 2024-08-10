@@ -6,7 +6,7 @@
   .main-card {
     @apply flex h-screen w-screen bg-gray-600 flex-col justify-center items-center;
   }
-
+  
   .header {
     @apply text-6xl py-3 font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-400
   }
@@ -14,11 +14,11 @@
   .word-guess-input {
     @apply w-16 h-16 border border-gray-400 font-bold uppercase text-white flex justify-center items-center
   }
-
+  
   .letter-class {
     @apply h-10 rounded-md m-px flex justify-center items-center uppercase
   }
-} 
+}
 
 @keyframes flip {
   0% {
