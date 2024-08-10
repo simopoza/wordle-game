@@ -99,7 +99,7 @@ function App() {
         />
       ))}
       <KeyBoardButtons />
-      <p>word: {word}</p>
+      {/* <p>word: {word}</p> /* this is the word that you should guess if you wanna see it uncommentaire it*/}
       {/* Conditional Rendering for Game Status */}
       {
         showResultCard && (
